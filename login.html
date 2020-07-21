@@ -1,0 +1,50 @@
+<!--33
+
+광주인공지능 사관학교 자기소개 사이트, 
+로그인 하는 페이지 만들기 - 아이디  - 비밀번호 - 비밀번호 질문 받기 
+(label 과 select 태그 활용) - 자기소개 작성할 수 있는 폼 받기-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>광주인공지능사관학교 로그인</title>
+</head>
+<body>
+    <form>
+        <label for="userid_input">ID :</label>
+        <input
+            id = "userid_input"
+            type="text" 
+            name="userid" 
+            placeholder="아이디를 입력하세요"
+        />
+        <br/>
+        <label for="userpw_input">Password :</label>
+        <input 
+            id = "userpw_input"
+            type="password" 
+            name ="userpw" 
+            placeholder="비밀번호를 입력하세요"
+        />
+        <br/>
+
+        <label for="pw_check">비밀번호 질문</label>
+        <select id="pw_check" name ="비밀번호 질문">
+            <option value="제주">제주</option>
+            <option value="서울">서울</option>
+        </select>
+        <br/>
+        <label for="intro">자기소개 : </label>
+        <textarea id="intro" name="content" cols="50" rows="5">
+          자기 소개 작성
+        </textarea>
+        <button name="전송" type="submit">
+            전송하기
+        </button>
+
+    </form>
+</body>
+</html>
+
