@@ -10,41 +10,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>광주인공지능사관학교 로그인</title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <form>
-        <label for="userid_input">ID :</label>
-        <input
-            id = "userid_input"
+    <img src="나.jfif"/>
+    <div class="box">
+        <form action="http://aischool.kr" method="post">
+            <label for="userid_input">ID :</label>
+            <input
+                id = "userid_input"
+                type="text" 
+                name="userid" 
+                placeholder="아이디를 입력하세요"
+            />
+            <br/>
+            <label for="userpw_input">Password :</label>
+            <input 
+                id = "userpw_input"
+                type="password" 
+                name ="userpw" 
+                placeholder="비밀번호를 입력하세요"
+            />
+            <br/>
+
+            <label for="pw_check">비밀번호 질문</label>
+            <select id="pw_check" name ="비밀번호 질문">
+                <option value="q1">고향은?</option>
+                <option value="q2">가장 좋아하는 여행지는?</option>
+            </select>
+            <input 
             type="text" 
-            name="userid" 
-            placeholder="아이디를 입력하세요"
-        />
-        <br/>
-        <label for="userpw_input">Password :</label>
-        <input 
-            id = "userpw_input"
-            type="password" 
-            name ="userpw" 
-            placeholder="비밀번호를 입력하세요"
-        />
-        <br/>
-
-        <label for="pw_check">비밀번호 질문</label>
-        <select id="pw_check" name ="비밀번호 질문">
-            <option value="제주">제주</option>
-            <option value="서울">서울</option>
-        </select>
-        <br/>
-        <label for="intro">자기소개 : </label>
-        <textarea id="intro" name="content" cols="50" rows="5">
-          자기 소개 작성
-        </textarea>
-        <button name="전송" type="submit">
-            전송하기
-        </button>
-
-    </form>
+            name ="answer" 
+            placeholder="답변"
+            />
+            <br/>
+            <label for="intro">자기소개 : </label>
+            <br/>
+            <textarea id="intro" name="content" cols="50" rows="5">
+            자기 소개 작성
+            </textarea>
+            <button name="전송" type="submit">
+                전송하기
+            </button>
+        </form>
+    </div>
 </body>
 </html>
 

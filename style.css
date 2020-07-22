@@ -1,0 +1,11 @@
+.box {
+    background-color: burlywood;
+    width: 200px;
+    height: 200px;
+    border-color: black;
+}
+
+#intro {
+    font-size: 20px;
+    background-color: cyan;
+}
