@@ -1,0 +1,21 @@
+
+.container {
+
+    width: 250px;
+    height: 80px;
+    border: hotpink solid 2px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 5px;
+}
+
+.item {
+    background-color: hotpink;
+    width: 55px;
+    height: 55px;
+
+    border-radius: 10px;
+}
