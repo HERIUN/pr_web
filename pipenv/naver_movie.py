@@ -12,20 +12,20 @@ URL = 'https://movie.naver.com/movie/running/current.nhn'
 response = requests.get(URL)
 soup = BeautifulSoup(response.text, 'html.parser')
 
-review_section = soup.select(
+movie_section = soup.select(
 'div[id=container] > div[id=content] > div[class=article] > div[class=obj_section] > div[class=lst_wrap] > ul[class=lst_detail_t1] > li'
 )
 
-for review in review_section:
+for movie in movie_section:
         
-        a_tag = review.select_one('dl > dt > a')
+        a_tag = movie.select_one('dl > dt > a')
 
-        review_title = a_tag.get_text()
-        review_link = a_tag['href'].split('=')[1]
+        movie_title = a_tag.get_text() # or a_tag.text
+        movie_link = a_tag['href'].split('=')[1]
 
         data = {
-            'title' : review_title,
-            'code' : review_link
+            'title' : movie_title,
+            'code' : movie_link
         }
         print(data)
 
